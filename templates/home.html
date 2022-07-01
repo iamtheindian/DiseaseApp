@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container home-content">
+    <div id="about-application">
+        {% if not current_user.is_authenticated %}
+        <div class="login">
+
+            <h3>Please login <a href="/signin">Here!</a> to predict your disease</h3>
+        </div>
+
+        {% endif %}
+        <div class="heading">
+            <h1>About Application</h1>
+        </div>
+        <div class="content">
+            DoctorX is a web application that is used to diagnose the disease as per the respective symptoms provided by
+            the user. The model is built in a sequential neural network consisting of 130+ symptoms and 41 diseases that
+            the model can predict with 97+ percent accuracy.
+        </div>
+
+        <div class="heading">
+            <h1>Our Aim</h1>
+        </div>
+        <div class="content">
+            Due to the current situation of Covid-19, people are suffering from various kinds of disease. This project
+            aims to target those people who are suffering from well-known diseases, then it will predict the disease
+            accurately according to provided symptoms and the user can give treatment to himself according to the
+            predicted disease.
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
